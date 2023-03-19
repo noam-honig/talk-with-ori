@@ -1,0 +1,11 @@
+<form (submit)="add()">
+  <input name="newTaskTitle" [(ngModel)]="newTaskTitle" />
+  <button>add</button>
+</form>
+
+<ul>
+  <li *ngFor="let task of tasks">
+    <input [(ngModel)]="task.title" />
+    <button (click)="save(task)">Save</button>
+  </li>
+</ul>
