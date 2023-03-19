@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
     const signIn = new SignInController();
     openDialog(DataAreaDialogComponent, i => i.args = {
       title: terms.signIn,
+      //fields:[signIn.$.user,signIn.$.password],
       object: signIn,
       ok: async () => {
         remult.user = await signIn.signIn();

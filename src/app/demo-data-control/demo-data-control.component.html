@@ -1,0 +1,10 @@
+<div *ngFor="let f of person._.fields.toArray()">
+  {{ f.metadata.caption }}:
+  <input [(ngModel)]="f.inputValue" [type]="f.metadata.inputType" />
+  <span style="color: red">{{ f.error }}</span>
+</div>
+<button (click)="save()">Save</button>
+<data-control [field]="person.$.firstName"></data-control>
+
+<data-area [settings]="dataArea"></data-area>
+<data-grid [settings]="dataGrid"></data-grid>

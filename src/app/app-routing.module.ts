@@ -8,11 +8,13 @@ import { AdminGuard } from './users/AdminGuard';
 import { ShowDialogOnErrorErrorHandler } from './common/UIToolsService';
 import { terms } from './terms';
 import { ActiveRecordComponent } from './active-record/active-record.component';
+import { DemoDataControlComponent } from './demo-data-control/demo-data-control.component';
 
 const defaultRoute = terms.home;
 const routes: Routes = [
   { path: defaultRoute, component: HomeComponent },
   { path: 'active-record', component: ActiveRecordComponent },
+  { path: 'demo-data-control', component: DemoDataControlComponent },
   {
     path: terms.userAccounts,
     component: UsersComponent,

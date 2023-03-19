@@ -26,6 +26,7 @@ import { remult } from 'remult';
 import { SignInController } from './users/SignInController';
 import { TextAreaDataControlComponent } from './common/textarea-data-control/textarea-data-control.component';
 import { ActiveRecordComponent } from './active-record/active-record.component';
+import { DemoDataControlComponent } from './demo-data-control/demo-data-control.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ActiveRecordComponent } from './active-record/active-record.component';
     YesNoQuestionComponent,
     DataAreaDialogComponent,
     TextAreaDataControlComponent,
-    ActiveRecordComponent
+    ActiveRecordComponent,
+    DemoDataControlComponent
   ],
   imports: [
     BrowserModule,
