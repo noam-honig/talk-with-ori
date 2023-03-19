@@ -20,6 +20,12 @@ export class ActiveRecordComponent implements OnInit {
     this.tasks.push(await this.taskRepo.insert({ title: this.newTaskTitle }));
   }
   async save(task: Task) {
-    await this.taskRepo.save(task);
+    //await this.taskRepo.save(task);
+    await task.save()
+
+    // by inheriting from entity base we've got:
+    // * save and delete methods on the entity level (task.save())
+    // * ref info on the entity itself task._.wasChanged() for example
+    // * ref info for any field by using task.$.[field] for example - task.$.title.error
   }
 }
